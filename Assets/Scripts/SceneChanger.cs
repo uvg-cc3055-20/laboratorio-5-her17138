@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 /** 
- * Esta sera la clase utilizada para cambiar entre el menú principal y la escena de la nave espacial 
+ * Esta sera la clase utilizada para cambiar entre en escenas de dungeons. 
  * 
  * @author Ana Lucia Hernandez (17138).
  * 

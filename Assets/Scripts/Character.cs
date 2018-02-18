@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/** 
+ * Esta sera la clase para modelar el objeto Alien (personaje principal)
+ * @author Ana Lucia Hernandez (17138).
+ * 
+ **/
 public class Character : MonoBehaviour {
 
 
@@ -14,9 +19,9 @@ public class Character : MonoBehaviour {
     private bool facingRight = true;
     public GameObject feet;
     public LayerMask layerMask;
-    public GameObject doorOpen;
-    public GameObject doorClosed;
-    public SceneChanger cambiador;
+    public GameObject doorOpen; //imagen de la puerta abierta
+    public GameObject doorClosed; //imagen de la puerta cerrada
+    public SceneChanger cambiador; //para cambiar de escenas cuando el alien llegue a las puertas. 
     public string nextScene;
 
 	void Start () {
@@ -30,7 +35,7 @@ public class Character : MonoBehaviour {
 
 	void Update () {
         float move = Input.GetAxis("Horizontal");
-        if (move != 0) {
+        if (move != 0) {// para mover al personaje
             rb2d.transform.Translate(new Vector3(1, 0, 0) * move * speed * Time.deltaTime);
             facingRight = move > 0;
         }
@@ -47,7 +52,8 @@ public class Character : MonoBehaviour {
                 rb2d.AddForce(Vector2.up*jumpForce);
             }
         }
-        if (transform.position.x > 8.4f && transform.position.x < 8.9f)
+        if (transform.position.x > 8.4f && transform.position.x < 8.9f)//para cambiar de escena una vez el personaje este encima de las
+        // puertas
         {
             cambiador.OnStartGame(nextScene);
         }

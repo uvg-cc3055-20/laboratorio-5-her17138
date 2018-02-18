@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/** 
+ * Esta sera la clase utilizada para cambiar entre en escenas de dungeons. 
+ * 
+ * @author Ana Lucia Hernandez (17138).
+ * 
+ **/
 public class Weight : MonoBehaviour {
 	public LineRenderer line;
 	public DistanceJoint2D distanceJoint;
